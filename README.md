@@ -3,7 +3,7 @@ This Real-time prototype project Polling App using React and Socket IO is based 
 
 ## My updates:
 
-1. webpack: need add query presets.
+### webpack: need add query presets.
 
 ```bash
 module.exports = {
@@ -28,19 +28,19 @@ module.exports = {
 };
 ```
 
-2. React 15.0.1 : ReactDom component is not from React component any more;
+### React 15.0.1 : ReactDom component is not from React component any more;
 
-3. Newest version react-router component is implemented. 
+### Newest version react-router component is implemented. 
 
-	a. <Router> is now a class inside that component;
+	#### <Router> is now a class inside that component;
 	
-	b. hashHistory now must be implemented manually;
+	#### hashHistory now must be implemented manually;
 	
-	c. No DefaultRout. Instead new IndexRoute class is introduced.
+	#### No DefaultRout. Instead new IndexRoute class is introduced.
 	
-	d. Render method is updated as well.
+	#### Render method is updated as well.
 	
-	e. RouteHandler is not available any more. Variable pass to the RouteHandler has been changed as well.
+	#### RouteHandler is not available any more. Variable pass to the RouteHandler has been changed as well.
 	
 ```bash
 		{React.cloneElement(this.props.children, this.state)} to pass all state.
@@ -55,7 +55,8 @@ module.exports = {
 		}
 ```
 
-	f. NotFoundRoute updates.
+	#### NotFoundRoute updates.
+
 	
 ```bash
 		// v0.13.x
@@ -64,7 +65,7 @@ module.exports = {
 		<Route path="*" component={Whoops404}/>
 ```
 
-4. Graphing Result: updated with react-d3-basic
+### Graphing Result: updated with react-d3-basic
 
 	Thanks to http://www.reactd3.org/
 
