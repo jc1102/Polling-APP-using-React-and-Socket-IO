@@ -32,7 +32,7 @@ module.exports = {
 
 ### Newest version react-router component is implemented. 
 
-```bash<Router>``` is now a class inside that component;
+```<Router>``` is now a class inside that component;
 	
 hashHistory now must be implemented manually;
 
@@ -75,6 +75,9 @@ NotFoundRoute updates;
 ### Graphing Result: updated with react-d3-basic
 
 	Thanks to http://www.reactd3.org/
+	
+### Update React to ES6
+
 	
 ## Install and Initial with:
 
