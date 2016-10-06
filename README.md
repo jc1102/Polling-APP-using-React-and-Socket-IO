@@ -32,7 +32,7 @@ module.exports = {
 
 ### Newest version react-router component is implemented. 
 
-<Router> is now a class inside that component;
+```bash<Router>``` is now a class inside that component;
 	
 hashHistory now must be implemented manually;
 
