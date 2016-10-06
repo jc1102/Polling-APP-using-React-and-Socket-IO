@@ -75,5 +75,15 @@ NotFoundRoute updates;
 ### Graphing Result: updated with react-d3-basic
 
 	Thanks to http://www.reactd3.org/
+	
+## Install and Initial with:
+
+```bash
+npm install
+npm start
+```
+
+
+
 
 	
