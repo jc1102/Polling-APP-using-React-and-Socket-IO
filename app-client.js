@@ -10,12 +10,14 @@ var APP = require('./components/APP');
 var Audience = require('./components/Audience');
 var Speaker = require('./components/Speaker');
 var Board = require('./components/Board');
+var Whoops404 = require('./components/Whoops404');
 
 var routes = (
 	<Route path="/" component={APP}>
 		<IndexRoute component={Audience} />
 		<Route name="speaker" path="speaker" component={Speaker}></Route>
 		<Route name="board" path="board" component={Board}></Route>
+		<Route name="notfound" path="*" component={Whoops404}></Route>
 	</Route>
 );
 

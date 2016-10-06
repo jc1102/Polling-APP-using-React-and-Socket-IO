@@ -58,6 +58,7 @@ form a {
 }
 
 #currentQuestion button {
+    width: 100%;
     margin: 2px 0;
     cursor: pointer;
 }
