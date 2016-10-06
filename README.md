@@ -74,7 +74,9 @@ NotFoundRoute updates;
 
 ### Graphing Result: updated with react-d3-basic
 
-	Thanks to http://www.reactd3.org/
+
+Thanks to http://www.reactd3.org/
+
 	
 ### Update React to ES6
 
