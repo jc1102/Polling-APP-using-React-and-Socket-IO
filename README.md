@@ -32,30 +32,37 @@ module.exports = {
 
 ### Newest version react-router component is implemented. 
 
-	#### <Router> is now a class inside that component;
+<Router> is now a class inside that component;
 	
-	#### hashHistory now must be implemented manually;
+hashHistory now must be implemented manually;
+
+No DefaultRout. Instead new IndexRoute class is introduced;
 	
-	#### No DefaultRout. Instead new IndexRoute class is introduced.
+Render method is updated as well;
 	
-	#### Render method is updated as well.
-	
-	#### RouteHandler is not available any more. Variable pass to the RouteHandler has been changed as well.
+RouteHandler is not available any more. Variable pass to the RouteHandler has been changed as well;
 	
 ```bash
-		{React.cloneElement(this.props.children, this.state)} to pass all state.
-		if more than state:
-		{
-			React.cloneElement(this.props.children, {
-				title:this.state.title,
-				status:this.state.status,
-				dance:this.state.dance,
-				emit:this.emit
-			})
-		}
+{React.cloneElement(this.props.children, this.state)} to pass all state.
 ```
 
-	#### NotFoundRoute updates.
+
+if more than state:
+
+
+```bash
+{
+	React.cloneElement(this.props.children, {
+		title:this.state.title,
+		status:this.state.status,
+		dance:this.state.dance,
+		emit:this.emit
+	})
+}
+```
+
+
+NotFoundRoute updates;
 
 	
 ```bash
