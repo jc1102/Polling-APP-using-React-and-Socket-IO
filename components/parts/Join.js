@@ -1,18 +1,22 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {Link} from 'react-router'
 
-var Join = React.createClass({
+class Join extends React.Component {
+
+	constructor() {
+		super();
+		this.join = this.join.bind(this);
+	} 
 
 	join() {
 		var memberName = ReactDOM.findDOMNode(this.refs.name).value;
 		this.props.emit('join', {name: memberName});
-	},
+	}
 
 	render() {
 		return (
-				<form action="javascript:void(0)" onSubmit={this.join}>
+				<form action="javascript:void(0)" onSubmit={this.join.bind()}>
 
 					<label>Full Name </label>
 					<input ref="name"
@@ -25,6 +29,6 @@ var Join = React.createClass({
 				</form>
 			);
 	}
-});
+}
 
 module.exports = Join;

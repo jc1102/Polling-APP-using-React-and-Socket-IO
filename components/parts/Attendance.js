@@ -1,6 +1,11 @@
-var React = require('react');
+import React from 'react'
 
-var Attendance = React.createClass({
+class Attendance extends React.Component {
+
+	constructor() {
+		super();
+		this.addMemberRow = this.addMemberRow.bind(this);
+	}
 
 	addMemberRow(member, i) {
 		return (
@@ -9,7 +14,7 @@ var Attendance = React.createClass({
 					<td>{member.id}</td>
 				</tr>
 			);
-	},
+	}
 
 	render() {
 		return(
@@ -29,6 +34,6 @@ var Attendance = React.createClass({
 			</div>
 			);
 	}
-});
+}
 
 module.exports = Attendance;

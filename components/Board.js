@@ -1,12 +1,12 @@
-var React = require('react');
-var Display = require('./parts/Display');
-var D3 = require('react-d3-basic');
-var BarChart = D3.BarChart;
+import React from 'react'
+import {BarChart} from 'react-d3-basic'
+import Display from './parts/Display'
 
-var Board = React.createClass({
+class Board extends React.Component {
 
-	getInitialState() {
-		return {
+	constructor() {
+		super();
+		this.state = {
 			chartSeries:[
 				{
 					field: 'results',
@@ -20,7 +20,7 @@ var Board = React.createClass({
 			xLabel:"choice",
 			yLabel:"results"
 		}
-	},
+	}
 	
 	barGraphData(results) {
 		return Object.keys(results).map(function(choice) {
@@ -29,12 +29,12 @@ var Board = React.createClass({
 				results: results[choice]
 			};
 		});
-	},
+	}
 
 	render() {
 		return (
 				<div id="scoreboard">
-				
+
 					<Display if={this.props.status === 'connected' && this.props.currentQuestion}>
 						<BarChart title={this.props.currentQuestion.q} 
 									data={this.barGraphData(this.props.results)} 
@@ -54,6 +54,6 @@ var Board = React.createClass({
 				</div>
 			);
 	}
-});
+}
 
 module.exports = Board;

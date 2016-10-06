@@ -1,10 +1,16 @@
-var React = require('react');
+import React from 'react'
 
-var Questions = React.createClass({
+class Questions extends React.Component {
+
+	constructor() {
+		super();
+		this.ask = this.ask.bind(this);
+		this.addQuestion = this.addQuestion.bind(this);
+	}
 
 	ask(question) {
 		this.props.emit('ask', question);
-	},
+	}
 
 	addQuestion(question, i) {
 		return (
@@ -12,7 +18,7 @@ var Questions = React.createClass({
 					<span onClick={this.ask.bind(null, question)}>{question.q}</span>
 				</div>
 			);
-	},
+	}
 
 	render() {
 		return (
@@ -22,6 +28,6 @@ var Questions = React.createClass({
 				</div>
 			);
 	}
-});
+}
 
 module.exports = Questions;

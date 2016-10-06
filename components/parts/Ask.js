@@ -1,22 +1,26 @@
-var React = require('react');
-var Display = require('./Display');
+import React from 'react'
+import Display from './Display'
 
-var Ask = React.createClass({
+class Ask extends React.Component {
 
-	getInitialState() {
-		return {
+	constructor() {
+		super();
+		this.state  = {
 			choices: [],
 			answer: undefined
 		}
-	},
+		this.setUpChoices = this.setUpChoices.bind(this);
+		this.select = this.select.bind(this);
+		this.addChoiceButton = this.addChoiceButton.bind(this);
+	}
 
 	componentWillMount() {
 		this.setUpChoices();
-	},
+	}
 
 	componentWillReceiveProps() {
 		this.setUpChoices();
-	},
+	}
 
 	setUpChoices() {
 		var choices = Object.keys(this.props.question);
@@ -25,7 +29,7 @@ var Ask = React.createClass({
 			choices: choices,
 			answer: sessionStorage.answer 
 		});
-	},
+	}
 
 	select(choice) {
 		this.setState({ answer: choice });
@@ -34,7 +38,7 @@ var Ask = React.createClass({
 			question: this.props.question,
 			choice: choice
 		});
-	},
+	}
 
 	addChoiceButton(choice, i) {
 		var buttonTypes = ['primary', 'success', 'warning', 'danger'];
@@ -47,7 +51,7 @@ var Ask = React.createClass({
 					</button>
 				</div>
 			);
-	},
+	}
 
 	render() {
 		return (
@@ -68,6 +72,6 @@ var Ask = React.createClass({
 				</div>
 			);
 	}
-});
+}
 
 module.exports = Ask;

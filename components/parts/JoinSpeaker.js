@@ -1,17 +1,22 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-var JoinSpeaker = React.createClass({
+class JoinSpeaker extends React.Component {
+
+	constructor() {
+		super();
+		this.start = this.start.bind(this);
+	}
 
 	start() {
 		var speakerName = ReactDOM.findDOMNode(this.refs.name).value;
 		var title = ReactDOM.findDOMNode(this.refs.title).value;
 		this.props.emit('start', { name: speakerName, title: title });
-	},
+	}
 
 	render() {
 		return (
-				<form action="javascript:void(0)" onSubmit={this.start}>
+				<form action="javascript:void(0)" onSubmit={this.start.bind()}>
 
 					<label>Full Name </label>
 					<input ref="name"
@@ -30,6 +35,6 @@ var JoinSpeaker = React.createClass({
 				</form>
 			);
 	}
-});
+}
 
 module.exports = JoinSpeaker;
