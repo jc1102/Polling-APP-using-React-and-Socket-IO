@@ -6,4 +6,4 @@ class Display extends React.Component {
 	}
 }
 
-module.exports = Display;
+export default Display

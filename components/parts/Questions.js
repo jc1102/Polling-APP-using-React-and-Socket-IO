@@ -30,4 +30,4 @@ class Questions extends React.Component {
 	}
 }
 
-module.exports = Questions;
+export default Questions

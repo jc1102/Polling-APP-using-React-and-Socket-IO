@@ -37,4 +37,4 @@ class JoinSpeaker extends React.Component {
 	}
 }
 
-module.exports = JoinSpeaker;
+export default JoinSpeaker

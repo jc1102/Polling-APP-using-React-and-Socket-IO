@@ -74,4 +74,4 @@ class Ask extends React.Component {
 	}
 }
 
-module.exports = Ask;
+export default Ask

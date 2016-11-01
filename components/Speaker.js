@@ -26,4 +26,4 @@ class Speaker extends React.Component {
 	}
 }
 
-module.exports = Speaker;
+export default Speaker

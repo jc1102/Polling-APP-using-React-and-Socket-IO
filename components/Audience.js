@@ -34,4 +34,4 @@ class Audience extends React.Component {
 	}
 }
 
-module.exports = Audience;
+export default Audience

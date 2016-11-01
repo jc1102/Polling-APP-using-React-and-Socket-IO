@@ -31,4 +31,4 @@ class Join extends React.Component {
 	}
 }
 
-module.exports = Join;
+export default Join

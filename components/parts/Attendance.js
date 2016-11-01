@@ -36,4 +36,4 @@ class Attendance extends React.Component {
 	}
 }
 
-module.exports = Attendance;
+export default Attendance

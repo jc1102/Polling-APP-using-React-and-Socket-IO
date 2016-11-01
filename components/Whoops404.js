@@ -17,4 +17,4 @@ class Whoops404 extends React.Component {
 	}
 }
 
-module.exports = Whoops404;
+export default Whoops404
